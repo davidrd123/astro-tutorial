@@ -1,5 +1,28 @@
 ---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 
+const pageTitle = 'About Me';
+
+const identity = {
+  firstName: 'David',
+  lastName: 'Dickinson',
+  country: 'United States',
+  occupation: 'Software Developer',
+  hobbies: ["photography, cycling, hiking, reading, and cooking"],
+};
+
+const skills = {
+  backEnd: ['Node.js', 'Ruby', 'Go', 'Express', 'MongoDB', 'PostgreSQL'],
+  frontEnd: ['HTML/CSS', 'JavaScript', 'TypeScript', 'React/Redux', 'Handlebars'],
+  Cloud: ['DigitalOcean', 'AWS (EC2, S3, IAM, ECS, RDS)', 'Heroku', 'Fly.io', 'Netlify', 'Vercel'],
+  other: ['Git/GitHub', 'Docker', 'Linux', 'Bash', 'HTTP', 'WebSockets', 'Jest', 'OOP', 'Nginx', 'Postman']
+}
+
+const skillColor = "green";
+const fontWeight = "bold";
+const textCase = "titlecase";
 ---
 
 <html lang="en">
@@ -8,14 +31,58 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{pageTitle}</title>
+    <style define:vars={{skillColor, fontWeight, textCase}}>
+      /* Reset any margins and padding to ensure consistency */
+  
+    
+      /* Set base styles for the table */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px; /* Adjust as needed */
+        font-family: Arial, sans-serif; /* Example font */
+      }
+    
+      /* Style for table headers */
+      th {
+        padding: 10px;
+        background-color: #f2f2f2; /* Light grey background */
+        font-weight: bold;
+        border: 1px solid #000; /* Black borders */
+        text-align: left;
+      }
+    
+      /* Style for table cells */
+      td {
+        padding: 10px;
+        border: 1px solid #000; /* Black borders */
+        text-align: left;
+        background-color: #fff; /* White background for cells */
+      }
+    
+      h1 {
+        margin-bottom: 20px; /* Adjust as needed */
+        color: purple;
+        font-size: 4rem;
+      }
+    
+      p {
+        margin-bottom: 10px; /* Adjust as needed */
+      }
+
+      .skill {
+        color: var(--skillColor);
+        font-weight: var(--fontWeight);
+        text-transform: var(--textCase);
+
+      }
+    </style>
 	</head>
 	<body>
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
+    <Header />
 
-		<h1>About Me</h1>
+		<h1>{pageTitle}</h1>
     <h2>... and my new Astro site!</h2>
 
     <p>
@@ -25,5 +92,31 @@
     <p>
       I'm working through the astro docs 'build a blog' tutorial with this
     </p>
+
+    <p>Here are a few facts about me:</p>
+    <ul>
+      <li>My name is {identity.firstName}.</li>
+      <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
+      {identity.hobbies.length >= 2 &&
+        <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}.</li>
+      }
+    </ul>
+    <p>My skills are:</p>
+    <table>
+      <tr>
+        <th>Back End</th>
+        <th>Front End</th>
+        <th>Cloud</th>
+        <th>Other</th>
+      </tr>
+      <tr>
+        <td class="skill">{skills.backEnd.join(', ')}</td>
+        <td class="skill">{skills.frontEnd.join(', ')}</td>
+        <td class="skill">{skills.Cloud.join(', ')}</td>
+        <td class="skill">{skills.other.join(', ')}</td>
+      </tr>
+    </table>
+
+    <Footer />
 	</body>
 </html>
