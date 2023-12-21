@@ -1,0 +1,28 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+const { frontmatter } = Astro.props;
+const pubDate = new Date(frontmatter.pubDate);
+
+const monthNames = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN",
+  "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"
+];
+
+const formattedDate = `${monthNames[pubDate.getMonth()]} ${pubDate.getDate()}, ${pubDate.getFullYear()}`;
+import '../styles/global.css';
+---
+<BaseLayout pageTitle={frontmatter.title}>
+  <div class="post-header">
+    <img src={frontmatter.image.url} alt={frontmatter.image.alt} />
+    
+    <div class="post-metadata">
+      <p class="date">{formattedDate}</p>
+      <p><em>{frontmatter.description}</em></p>
+    </div>
+    
+  </div>
+  <slot />
+</BaseLayout>
+
+
+

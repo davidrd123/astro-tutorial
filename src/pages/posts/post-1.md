@@ -1,6 +1,10 @@
 ---
+
+layout: ../../layouts/MarkdownPostLayout.astro
 title: 'My First Blog Post'
+
 pubDate: 2023-12-19
+
 description: 'This is my first blog post.'
 author: 'David Dickinson'
 image:
@@ -8,10 +12,6 @@ image:
   alt: 'A shot of two people standing next to large visuals'
 tags: ['astro', 'blogging', 'learning in public']
 ---
-# My First Blog Post
-
-Published on: 2023-12-19
-
 Welcome to my _new blog_ using **Astro**!
 
 ## Plans for this blog

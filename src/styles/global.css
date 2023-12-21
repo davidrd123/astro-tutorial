@@ -20,6 +20,71 @@ html {
     font-size: 2.5rem;
   }
 
+  h2 {
+    margin: 1rem 0;
+    font-size: 2rem;
+  }
+
+  /* Blog post styles */
+  .post-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .post-header h1 {
+    margin-bottom: 0.5rem;
+  }
+
+  .post-header img {
+    width: 100%;
+    height: auto;
+    max-width: 60%;
+  }
+
+  .post-metadata {
+    text-align: center;
+  }
+
+  .date {
+    font-size: 0.7rem; /* Adjust as needed */
+  }
+
+  /* Description styles */
+  .post-header p {
+    font-size: 1rem; /* Adjust as needed */
+    color: #666; /* Lighter color for description */
+    margin-top: 0.5rem; /* Space between metadata and description */
+  }
+
+  /* Skill table styles */
+
+  /* Set base styles for the table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; /* Adjust as needed */
+    font-family: Arial, sans-serif; /* Example font */
+  }
+
+  /* Style for table headers */
+  th {
+    padding: 10px;
+    background-color: #f2f2f2; /* Light grey background */
+    font-weight: bold;
+    border: 1px solid #000; /* Black borders */
+    text-align: left;
+  }
+
+  /* Style for table cells */
+  td {
+    padding: 10px;
+    border: 1px solid #000; /* Black borders */
+    text-align: left;
+    background-color: #fff; /* White background for cells */
+  }
+
+
+
   /* nav styles */
 
   .hamburger {
@@ -81,3 +146,4 @@ html {
     display: none;
   }
 }
+
