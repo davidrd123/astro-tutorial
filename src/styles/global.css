@@ -1,104 +1,111 @@
 html {
-    background-color: #f1f5f9;
-    font-family: sans-serif;
-  }
-  
-  body {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 80ch;
-    padding: 1rem;
-    line-height: 1.5;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-  
-  h1 {
-    margin: 1rem 0;
-    font-size: 2.5rem;
-  }
+  background-color: #f1f5f9;
+  font-family: sans-serif;
+}
 
-  h2 {
-    margin: 1rem 0;
-    font-size: 2rem;
-  }
+html.dark {
+  background-color: #0d0950;
+  color: #fff;
+}
 
-  /* Blog post styles */
-  .post-header {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  
-  .post-header h1 {
-    margin-bottom: 0.5rem;
-  }
+.dark .nav-links a {
+  color: #fff;
+}
 
-  .post-header img {
-    width: 100%;
-    height: auto;
-    max-width: 60%;
-  }
+body {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 80ch;
+  padding: 1rem;
+  line-height: 1.5;
+}
 
-  .post-metadata {
-    text-align: center;
-  }
+* {
+  box-sizing: border-box;
+}
 
-  .date {
-    font-size: 0.7rem; /* Adjust as needed */
-  }
+h1 {
+  margin: 1rem 0;
+  font-size: 2.5rem;
+}
 
-  /* Description styles */
-  .post-header p {
-    font-size: 1rem; /* Adjust as needed */
-    color: #666; /* Lighter color for description */
-    margin-top: 0.5rem; /* Space between metadata and description */
-  }
+h2 {
+  margin: 1rem 0;
+  font-size: 2rem;
+}
 
-  /* Skill table styles */
+/* Blog post styles */
+.post-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
 
-  /* Set base styles for the table */
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px; /* Adjust as needed */
-    font-family: Arial, sans-serif; /* Example font */
-  }
+.post-header h1 {
+  margin-bottom: 0.5rem;
+}
 
-  /* Style for table headers */
-  th {
-    padding: 10px;
-    background-color: #f2f2f2; /* Light grey background */
-    font-weight: bold;
-    border: 1px solid #000; /* Black borders */
-    text-align: left;
-  }
+.post-header img {
+  width: 100%;
+  height: auto;
+  max-width: 60%;
+}
 
-  /* Style for table cells */
-  td {
-    padding: 10px;
-    border: 1px solid #000; /* Black borders */
-    text-align: left;
-    background-color: #fff; /* White background for cells */
-  }
+.post-metadata {
+  text-align: center;
+}
 
+.date {
+  font-size: 0.7rem; /* Adjust as needed */
+}
 
+/* Description styles */
+.post-header p {
+  font-size: 1rem; /* Adjust as needed */
+  color: #666; /* Lighter color for description */
+  margin-top: 0.5rem; /* Space between metadata and description */
+}
 
-  /* nav styles */
+/* Skill table styles */
 
-  .hamburger {
-    padding-right: 20px;
-    cursor: pointer;
-  }
-  
-  .hamburger .line {
-    display: block;
-    width: 40px;
-    height: 5px;
-    margin-bottom: 10px;
-    background-color: #ff9776;
-  }
+/* Set base styles for the table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px; /* Adjust as needed */
+  font-family: Arial, sans-serif; /* Example font */
+}
+
+/* Style for table headers */
+th {
+  padding: 10px;
+  background-color: #f2f2f2; /* Light grey background */
+  font-weight: bold;
+  border: 1px solid #000; /* Black borders */
+  text-align: left;
+}
+
+/* Style for table cells */
+td {
+  padding: 10px;
+  border: 1px solid #000; /* Black borders */
+  text-align: left;
+  background-color: #fff; /* White background for cells */
+}
+
+/* nav styles */
+
+.hamburger {
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  display: block;
+  width: 40px;
+  height: 5px;
+  margin-bottom: 10px;
+  background-color: #ff9776;
+}
 
 .nav-links {
   width: 100%;
@@ -146,4 +153,3 @@ html {
     display: none;
   }
 }
-
