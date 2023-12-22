@@ -1,5 +1,6 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import { fade } from "astro:transitions";
 import { format } from 'date-fns';
 
 const { frontmatter } = Astro.props;
@@ -12,11 +13,12 @@ import '../styles/global.css';
 <BaseLayout pageTitle={frontmatter.title}>
   <div class="post-header">
     
-    <img src={frontmatter.image.url} alt={frontmatter.image.alt} />
+    <img transition:animate={fade({ duration: '1s' })} src={frontmatter.image.url} alt={frontmatter.image.alt} />
 
     <div class="post-metadata">
+      <p>Written by: <a href="/about/">{frontmatter.author}</a></p>
       <p class="date">{formattedDate}</p>
-      <p><em>{frontmatter.description}</em></p>
+      <p transition:animate={fade({ duration: '2s' })}><em>{frontmatter.description}</em></p>
     </div>
     
     <div class="tags">
